@@ -1,4 +1,5 @@
 ### STRUCTURAL BREAK TESTS
+# finds a point in time where the data changes, isolating a possible occurance of an event which influences the data
 
 # 1. Testing for a structural break (with a priori knowledge)
 
@@ -18,7 +19,7 @@
   ## Load dataset "deaths-from-homicides-and-suicid" from current working directory
   deaths <- read.csv(file="data/deaths-from-homicides-and-suicid.csv", header=TRUE, sep=",")[-91,]
   
-  
+  head(deaths)
   ## Create timeseries object for homicides by firearms 
   homicides_firearm <- ts(deaths$Firearm..Homicide, start = 1915, end = 2004)
   
