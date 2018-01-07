@@ -23,6 +23,7 @@
   ## Create timeseries object for homicides by firearms 
   homicides_firearm <- ts(deaths$Firearm..Homicide, start = 1915, end = 2004)
   
+  ## From https://www.r-bloggers.com/endogenously-detecting-structural-breaks-in-a-time-series-implementation-in-r/ :
   ## store the breakdates
   bp_ts <- breakpoints(homicides_firearm ~ 1)
   
